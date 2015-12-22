@@ -22,7 +22,7 @@ import javax.sound.sampled.TargetDataLine;
  *
  * @author michael
  */
-class BasicAudioInput extends AbstractComponent implements AudioInput {
+public class BasicAudioInput extends AbstractComponent implements AudioInput {
 
     public BasicAudioInput() {
     }

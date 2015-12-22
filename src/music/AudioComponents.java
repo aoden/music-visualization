@@ -24,7 +24,7 @@ public class AudioComponents {
 
     private Recorder recorder;
 
-    void setRecorder(Recorder recorder) {
+    public void setRecorder(Recorder recorder) {
         this.recorder = recorder;
         this.recorder.setAudioComponents(this);
     }
@@ -35,7 +35,7 @@ public class AudioComponents {
 
     private AudioOutput audioOut;
 
-    void setAudioOutput(AudioOutput audioOut) {
+    public void setAudioOutput(AudioOutput audioOut) {
         this.audioOut = audioOut;
         this.audioOut.setAudioComponents(this);
     }
@@ -45,7 +45,7 @@ public class AudioComponents {
     }
     private GUIManager guiManager;
 
-    void setGUIManager(GUIManager gui) {
+    public void setGUIManager(GUIManager gui) {
         this.guiManager = gui;
         this.guiManager.setAudioComponents(this);
     }
@@ -55,28 +55,28 @@ public class AudioComponents {
     }
     private Engine engine;
 
-    void setEngine(Engine engine) {
+    public void setEngine(Engine engine) {
         this.engine = engine;
         this.engine.setAudioComponents(this);
     }
 
-    Engine getEngine() {
+    public Engine getEngine() {
         return engine;
     }
     private AudioInput audioInput;
 
-    void setAudioInput(AudioInput audioInput) {
+    public void setAudioInput(AudioInput audioInput) {
         this.audioInput = audioInput;
         this.audioInput.setAudioComponents(this);
     }
 
-    AudioInput getAudioInput() {
+    public AudioInput getAudioInput() {
         return audioInput;
     }
 
     private NoiseFilter noiseFilter;
 
-    void setNoiseFilter(NoiseFilter noiseFilter) {
+    public void setNoiseFilter(NoiseFilter noiseFilter) {
         this.noiseFilter = noiseFilter;
         this.noiseFilter.setAudioComponents(this);
     }
@@ -85,7 +85,7 @@ public class AudioComponents {
         return noiseFilter;
     }
 
-    void initialize() {
+    public void initialize() {
         this.recorder.initialize();
         this.audioInput.initialize();
         this.engine.initialize();
@@ -96,7 +96,7 @@ public class AudioComponents {
         this.audioInput.addListener(engine);
     }
 
-    void destroy()
+    public void destroy()
     {
         this.audioInput.destroy();
         this.engine.destroy();
@@ -106,7 +106,7 @@ public class AudioComponents {
         this.noiseFilter.destroy();
     }
 
-    void start() {
+    public void start() {
         getRecorder().start();
         getAudioInput().start();
         getEngine().start();
@@ -115,7 +115,7 @@ public class AudioComponents {
         getNoiseFilter().destroy();
     }
 
-    void stop() {
+    public void stop() {
         this.audioInput.stop();
         this.engine.stop();
         this.guiManager.stop();
@@ -127,10 +127,11 @@ public class AudioComponents {
     private AudioFormat audioInputFormat;
     private AudioFormat audioOutputFormat;
 
-    void setAudioInputFormat(AudioFormat audioInputFormat) {
+    public void setAudioInputFormat(AudioFormat audioInputFormat) {
         this.audioInputFormat = audioInputFormat;
     }
-    void setAudioOutputFormat(AudioFormat audioOutputFormat) {
+
+    public void setAudioOutputFormat(AudioFormat audioOutputFormat) {
         this.audioOutputFormat = audioOutputFormat;
     }
 

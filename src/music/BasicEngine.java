@@ -15,7 +15,7 @@ import music.data.impl.DataFactory;
  *
  * @author michael
  */
-class BasicEngine extends AbstractComponent implements Engine {
+public class BasicEngine extends AbstractComponent implements Engine {
 
     public BasicEngine() {
     }
