@@ -19,6 +19,14 @@ public class GraphPanel {
     Window window;
     ChartPanel panel;
 
+    public Window getWindow() {
+        return window;
+    }
+
+    public ChartPanel getPanel() {
+        return panel;
+    }
+
     public GraphPanel(String title, int width, int height) {
         panel = new ChartPanel();
         panel.setPreferredSize(new Dimension(width, height));

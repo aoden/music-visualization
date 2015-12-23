@@ -50,7 +50,7 @@ public class AudioComponents {
         this.guiManager.setAudioComponents(this);
     }
 
-    GUIManager getGUIManager() {
+    public GUIManager getGUIManager() {
         return guiManager;
     }
     private Engine engine;
