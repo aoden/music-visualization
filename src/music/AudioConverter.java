@@ -243,7 +243,7 @@ public class AudioConverter {
         }
     }
 
-    static void convertToBytes(AudioFormat format, DataReference<Double> buffer, byte[] output) {
+    public static void convertToBytes(AudioFormat format, DataReference<Double> buffer, byte[] output) {
 
         int sampleSize = format.getSampleSizeInBits();
         boolean signed = format.getEncoding() == AudioFormat.Encoding.PCM_SIGNED;
@@ -282,7 +282,7 @@ public class AudioConverter {
 
     }
 
-    static void convertToBytes(AudioFormat format, double[] buffer, byte[] output) {
+    public static void convertToBytes(AudioFormat format, double[] buffer, byte[] output) {
 
         int sampleSize = format.getSampleSizeInBits();
         boolean signed = format.getEncoding() == AudioFormat.Encoding.PCM_SIGNED;

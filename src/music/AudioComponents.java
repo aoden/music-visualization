@@ -149,7 +149,7 @@ public class AudioComponents {
         this.audioChunkSize = size;
     }
 
-    AudioFormat getAudioOutputFormat() {
+    public AudioFormat getAudioOutputFormat() {
         return audioOutputFormat;
     }
 }

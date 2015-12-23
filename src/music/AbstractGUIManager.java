@@ -27,7 +27,7 @@ public class AbstractGUIManager extends AbstractComponent implements GUIManager 
     private HashMap<String, List<GraphPanel>> panelLookup = new HashMap<String, List<GraphPanel>>();
     
     private boolean continuePolling = true;
-    private Thread pollingThread;
+    protected Thread pollingThread;
 
     private boolean paused = false;
 

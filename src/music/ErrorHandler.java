@@ -12,7 +12,7 @@ import java.util.Stack;
  *
  * @author michael
  */
-class ErrorHandler {
+public class ErrorHandler {
 
     private static Stack<Error> errorStack = new Stack<Error>();
     private static Stack<Error> warningStack = new Stack<Error>();
