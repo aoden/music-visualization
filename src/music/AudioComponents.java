@@ -135,7 +135,7 @@ public class AudioComponents {
         this.audioOutputFormat = audioOutputFormat;
     }
 
-    AudioFormat getAudioInputFormat() {
+    public AudioFormat getAudioInputFormat() {
         return audioInputFormat;
     }
 
